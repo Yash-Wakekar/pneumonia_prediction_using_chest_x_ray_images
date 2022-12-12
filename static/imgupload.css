@@ -1,0 +1,108 @@
+.bg
+{
+    background-image: url('page2bg.jpg');
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+    /*filter: blur(4px);*/
+}
+body 
+{
+    margin:0px;
+    height:100vh;
+    background: #e4eef5;
+}
+
+.form-input 
+{
+    width:350px;
+    padding:30px;
+    background:#fff;
+    box-shadow: -3px -3px 7px rgba(94, 104, 121, 0.377), 3px 3px 7px rgba(94, 104, 121, 0.377);
+}
+.form-input img 
+{
+    width:100%;
+    display:none;
+    margin-bottom:30px;
+}
+.form-input input 
+{
+    display:none;
+}
+.form-input label 
+{
+    display:block;
+    width:45%;
+    height:45px;
+    margin-left: 25%;
+    margin: 20px;
+    line-height:50px;
+    text-align:center;
+    background:#1172c2;
+    color:#fff;
+    font-size:15px;
+    font-family:"Open Sans",sans-serif;
+    text-transform:Uppercase;
+    font-weight:600;
+    border-radius:5px;
+    cursor: pointer;
+}
+.center 
+{
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+}
+.form-input 
+{
+    width:350px;
+    padding:20px;
+    background:#fff;
+    box-shadow: -3px -3px 7px rgba(94, 104, 121, 0.377), 3px 3px 7px rgba(94, 104, 121, 0.377);
+    position: absolute;
+}
+.form-input img 
+{
+    width:100%;
+    display:none;
+    margin-bottom:30px;
+}
+.form-input input 
+{
+    display:none;
+}
+.form-input label 
+{
+    display:block;
+    width:45%;
+    height:45px;
+    margin-left: 25%;
+    line-height:50px;
+    text-align:center;
+    background:#1172c2;
+    color:#fff;
+    font-size:15px;
+    font-family:"Open Sans",sans-serif;
+    text-transform:Uppercase;
+    font-weight:600;
+    border-radius:5px;
+    cursor:pointer;
+}
+button
+{
+    background:#1172c2;
+    color:#fff;
+    font-size:15px;
+    font-family:"Open Sans",sans-serif;
+    text-transform:Uppercase;
+    font-weight:600;
+    border-radius:5px;
+    border: none;
+    cursor:pointer;
+    width:45%;
+    height:45px;
+    margin-left: 25%;
+}

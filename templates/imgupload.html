@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--    <script src="D:/chest_xray_project/static/img.js"></script>-->
+    <script src="{{url_for('static', filename='img.js')}}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='imgupload.css') }}">
+<!--    <link rel="stylesheet" href="imgupload.css">-->
+</head>
+<body>
+    <div class="bg">
+        <div class="center">
+            <div class="form-input">
+                <form action="/predict" method="post" enctype="multipart/form-data">
+                    <div class="preview">
+                        <!--<img id="file-ip-1-preview"> -->
+                        <img src="" alt="" id="file-ip-1-preview">
+                    </div>
+                    <label for="file-ip-1">Upload Image</label>
+                    <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);" name="file">
+                    <button type="submit">Submit</button>
+                    <div>
+                        <!-- <label for="submit">Submit</label>
+                        <input type="submit" name="submit" value="Submit"/>
+                        <label for="file-ip-1">Upload Image</label>
+                        <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);">-->
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+
+
+</style>
+</html>

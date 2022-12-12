@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1b1502f5a9.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='page2.css') }}">
+</head>
+<body>
+    <h1><span class="circle-sketch-highlight">Report of Pneumonia Detection</span></h1>
+    <div class="background">
+        {% if prediction_result == 0 %}
+            <div class="box"><p style="font-size: 20px">Pneumonia Not Detected</p></div>
+        {% endif %}
+
+        {% if prediction_result == 1 %}
+            <div class="box">
+                <p style="font-size: 20px; color :red; " >Pneumonia Detected <br> <br> Please Consult a doctor </p>
+                <br>
+                <br>
+<!--                <p style="font-size: 18px">Consult to doctor</p>-->
+            </div>
+        {% endif %}
+    </div>
+    {% if prediction_result == 1 %}
+        <div class="search">
+            <form action="/searchdoctor" method="post">
+                <label for="search">Search Doctor Near Your Location Here : </label>
+                <input type="text" id="search" name="search" class="search1" placeholder=" Enter Your Location" >
+                <button type="submit"class="sub"><i class="fa fa-search"></i></button>
+                <br><br>
+            </form>
+            <div class="note"><b>Wishing you a speedy recovery!</b></div>
+    {% endif %}
+    </div>
+</body>
+<style>
+    h1
+    {
+        text-align: center;
+        padding-top: 200px;
+    }
+    .box
+        {
+        height:100%;
+        margin: auto;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width:350px;
+        padding: 60px;
+        background:rgb(218, 236, 238);
+        box-shadow: -3px -3px 7px rgba(94, 104, 121, 0.377), 3px 3px 7px rgba(94, 104, 121, 0.377);
+        opacity: 0.75;
+    }
+    .search
+    {
+        text-align: center;
+        margin: 20px;
+
+
+    }
+    .note
+    {
+        text-align: center;
+        color: brown;
+        font-size: 30px;
+    }
+    .sub{
+    border-radius: 5rem;
+    width: 3rem;
+    height: 2.5rem
+
+}
+
+    .search1{
+    border-radius: 5rem;
+    width: 12rem;
+    height: 2rem
+    }
+</style>
+</html>
