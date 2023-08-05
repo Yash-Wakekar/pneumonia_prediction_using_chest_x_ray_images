@@ -1,4 +1,4 @@
-flask==2.2.5
+flask==2.3.2
 Werkzeug==2.2.2
 keras==2.10.0
 numpy==1.23.3
